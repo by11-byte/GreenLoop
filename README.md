@@ -2,7 +2,7 @@
 > **Recycle. Earn. Grow.**
 
 Academic Prototype developed for **University Hackathon 2026**  
-**Theme:** Sustainable Living & Community Empowerment (People & Planet)
+**Theme:** Sustainable Living & Community Empowerment (Planet)
 
 ---
 
@@ -18,11 +18,6 @@ GreenLoop bridges the gap between individual recycling efforts and shared townsh
 
 ## 🚀 Live Demo
 Test the interactive web prototype here:  
-👉 **[https://by11-byte.github.io/GreenLoop/)**
+👉 **(https://by11-byte.github.io/GreenLoop/)**
 
----
 
-## 🛠️ Tech Stack
-- **Frontend:** Vanilla HTML5, Modern CSS3
-- **Logic:** Vanilla JavaScript (ES6)
-- **Data Persistence:** Browser `localStorage` (Includes demonstration data and reset functionality)
