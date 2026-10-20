@@ -18,7 +18,7 @@ GreenLoop bridges the gap between individual recycling efforts and shared townsh
 
 ## 🚀 Live Demo
 Test the interactive web prototype here:  
-👉 **[https://by11-byte.github.io/GreenLoop/](https://by11-byte.github.io/GreenLoop/)**
+👉 **[https://by11-byte.github.io/GreenLoop/)**
 
 ---
 
