@@ -1,4 +1,4 @@
-/* --- Visual Theme & Variables --- */
+/* --- Color Palette & Variables --- */
 :root {
   --primary-green: #2d6a4f;
   --dark-green: #1b4332;
@@ -86,6 +86,7 @@ body {
   border: 1px solid var(--accent-mint);
   border-radius: 4px;
   background-color: var(--white);
+  font-size: 0.85rem;
 }
 
 .nav-bar {
@@ -419,6 +420,13 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   color: #a7f3d0;
+}
+
+.balance-lifetime {
+  display: block;
+  font-size: 0.75rem;
+  color: #e8f5e9;
+  margin-top: 2px;
 }
 
 /* Voting Progress Bars */
