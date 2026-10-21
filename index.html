@@ -8,10 +8,10 @@
 </head>
 <body>
 
-  <!-- Top Academic Prototype Banner -->
-  <div class="prototype-banner">
-    ⚠️ <strong>Academic Prototype:</strong> Developed for University Hackathon 2026. Data and hubs are simulated for demonstration. IPC Shopping Centre is featured as an independent real-world case.
-  </div>
+  <!-- Top Academic Disclaimer Banner -->
+  <aside class="prototype-banner" role="note">
+    ⚠️ <strong>Academic Prototype:</strong> Developed for University Hackathon 2026. All township hubs and reward partners are simulated demonstration data. IPC Shopping Centre is referenced independently for comparative study.
+  </aside>
 
   <!-- Header -->
   <header class="site-header">
@@ -21,15 +21,15 @@
         <p class="tagline">Recycle. Earn. Grow.</p>
       </div>
 
-      <!-- Quick Persona Switcher to Demonstrate Location & Balances -->
+      <!-- Demo Persona Switcher -->
       <div class="demo-resident-bar">
-        <label for="residentSelector">Active Demo Resident:</label>
+        <label for="residentSelector">Active Resident Persona:</label>
         <select id="residentSelector"></select>
       </div>
     </div>
 
     <!-- Navigation Bar -->
-    <nav class="nav-bar">
+    <nav class="nav-bar" aria-label="Main Navigation">
       <a href="#dashboard">Dashboard</a>
       <a href="#centres">Find Centres</a>
       <a href="#qr-pass">My QR Pass</a>
@@ -45,7 +45,7 @@
     <section id="dashboard" class="content-section">
       <div class="section-header">
         <h2>📊 Township Impact Dashboard</h2>
-        <p>Real-time metrics tracking verified recycling collections, points issued, and greening initiatives.</p>
+        <p>Verified environmental metrics aggregating community drop-offs, points, and greening initiatives.</p>
       </div>
 
       <div class="metrics-grid">
@@ -57,17 +57,17 @@
         <div class="metric-card">
           <span class="metric-icon">🪙</span>
           <div class="metric-value" id="dashTotalPoints">0</div>
-          <div class="metric-label">GreenPoints Awarded</div>
+          <div class="metric-label">Cumulative GreenPoints Awarded</div>
         </div>
         <div class="metric-card">
           <span class="metric-icon">👥</span>
           <div class="metric-value" id="dashActiveResidents">0</div>
-          <div class="metric-label">Participating Households</div>
+          <div class="metric-label">Registered Participating Households</div>
         </div>
         <div class="metric-card">
           <span class="metric-icon">🗳️</span>
           <div class="metric-value" id="dashTotalVotes">0</div>
-          <div class="metric-label">Community Greening Votes</div>
+          <div class="metric-label">Community Greening Votes Cast</div>
         </div>
       </div>
     </section>
@@ -76,18 +76,18 @@
     <section id="centres" class="content-section">
       <div class="section-header">
         <h2>📍 Find Nearby Recycling Centres</h2>
-        <p>Discover collection hubs sorted by proximity. GreenPoints are awarded exclusively at official GreenLoop Hubs.</p>
+        <p>Explore neighbourhood drop-off hubs. Note: Distances (~km) are straight-line estimates from the active resident's registered home address, not live GPS.</p>
       </div>
 
       <div class="filter-bar">
-        <input type="text" id="areaSearchInput" placeholder="Search by city, township or area (e.g., Petaling Jaya, Penang)...">
+        <input type="text" id="areaSearchInput" placeholder="Filter by area or keyword (e.g., Petaling Jaya, Elmina, Penang)...">
         <select id="materialFilter">
-          <option value="ALL">All Recyclable Materials</option>
-          <option value="Plastic">Plastic</option>
-          <option value="Paper">Paper / Cardboard</option>
-          <option value="Aluminium">Aluminium Cans</option>
-          <option value="Organics">Food Scraps (Compost)</option>
-          <option value="E-Waste">E-Waste</option>
+          <option value="ALL">All Accepted Materials</option>
+          <option value="plastic">Plastic</option>
+          <option value="paper">Paper / Cardboard</option>
+          <option value="aluminium">Aluminium Cans</option>
+          <option value="organics">Food Scraps (Compost)</option>
+          <option value="e-waste">E-Waste</option>
         </select>
       </div>
 
@@ -98,25 +98,26 @@
     <section id="qr-pass" class="content-section">
       <div class="section-header">
         <h2>📱 My QR Pass</h2>
-        <p>Show your digital resident pass at any GreenLoop hub for quick staff scanning and weight crediting.</p>
+        <p>Digital identification pass for township collection hubs. Staff verify physical materials and log points manually.</p>
       </div>
 
       <div class="qr-container">
         <div class="qr-card">
-          <img id="qrImage" src="" alt="Resident QR Pass" class="qr-code-img">
+          <img id="qrImage" src="" alt="Resident Identification QR Pass" class="qr-code-img">
           <h3 id="qrResidentName">Resident Name</h3>
           <p class="qr-subtext" id="qrResidentUnit">Unit: -</p>
-          <div class="qr-id-pill">Resident ID: <strong id="qrResidentId">-</strong></div>
+          <div class="qr-id-pill">ID: <strong id="qrResidentId">-</strong></div>
           <button class="btn btn-secondary btn-sm" id="autofillStaffBtn" style="margin-top: 14px;">
-            ✍️ Copy ID to Staff Verification Desk
+            ✍️ Copy ID to Staff Desk
           </button>
         </div>
         <div class="qr-instructions">
-          <h4>How to use your pass:</h4>
+          <h4>Working Verification Procedure:</h4>
           <ol>
-            <li>Bring your pre-sorted recyclables to your nearest participating GreenLoop Hub.</li>
-            <li>Present this screen or state your Resident ID to the on-duty staff.</li>
-            <li>Staff will inspect, weigh your materials, and credit GreenPoints instantly to your account.</li>
+            <li>Separate dry recyclables or organic kitchen scraps at home.</li>
+            <li>Present this screen or state your Resident ID to staff at an authorized GreenLoop Hub.</li>
+            <li>Staff inspect purity, weigh items on calibrated scales, and record the contribution at the verification desk.</li>
+            <li>GreenPoints are credited to your account upon staff confirmation.</li>
           </ol>
         </div>
       </div>
@@ -126,7 +127,7 @@
     <section id="staff-verification" class="content-section">
       <div class="section-header">
         <h2>✍️ Staff Recycling Verification Desk</h2>
-        <p>For community hall/guardhouse staff: Verify materials, log weights, and issue GreenPoints.</p>
+        <p>Authorized terminal for hub volunteers and guardhouse personnel to weigh and record drop-offs.</p>
       </div>
 
       <div class="card form-card">
@@ -134,11 +135,11 @@
           <div class="form-row">
             <div class="form-group">
               <label for="staffResidentIdInput">Resident ID:</label>
-              <input type="text" id="staffResidentIdInput" placeholder="e.g. GL-101" required>
+              <input type="text" id="staffResidentIdInput" placeholder="e.g., GL-101" required>
             </div>
 
             <div class="form-group">
-              <label for="staffHubSelect">Collection Location / Hub:</label>
+              <label for="staffHubSelect">Collection Facility:</label>
               <select id="staffHubSelect" required></select>
             </div>
           </div>
@@ -150,13 +151,13 @@
                 <option value="plastic">Plastic Bottles & Containers (10 pts/kg)</option>
                 <option value="paper">Cardboard & Paper (5 pts/kg)</option>
                 <option value="aluminium">Aluminium Cans (20 pts/kg)</option>
-                <option value="organics">Clean Food Scraps (4 pts/kg)</option>
+                <option value="organics">Sorted Food Scraps (4 pts/kg)</option>
               </select>
             </div>
 
             <div class="form-group">
               <label for="staffWeightInput">Verified Weight (kg):</label>
-              <input type="number" id="staffWeightInput" step="0.1" min="0.1" placeholder="e.g., 2.5" required>
+              <input type="number" id="staffWeightInput" step="0.1" min="0.1" max="500" placeholder="e.g., 2.5" required>
             </div>
           </div>
 
@@ -164,7 +165,7 @@
             Estimated Points to Credit: <strong>0 GreenPoints</strong>
           </div>
 
-          <button type="submit" class="btn btn-primary">✅ Confirm & Credit GreenPoints</button>
+          <button type="submit" id="staffSubmitBtn" class="btn btn-primary">✅ Confirm & Credit GreenPoints</button>
         </form>
       </div>
     </section>
@@ -173,36 +174,34 @@
     <section id="rewards" class="content-section">
       <div class="section-header">
         <h2>🎁 GreenPoints & Rewards</h2>
-        <p>Redeem your earned points for merchant vouchers or view your verified recycling history.</p>
+        <p>Redeem points for participating merchant vouchers or view verified recycling activity.</p>
       </div>
 
-      <!-- Balance Card -->
       <div class="profile-card">
         <div class="profile-details">
           <h3 id="portalResidentName">-</h3>
           <p id="portalResidentArea">-</p>
         </div>
         <div class="profile-balance">
-          <span class="balance-title">Current Balance</span>
+          <span class="balance-title">Available Spendable Balance</span>
           <span class="balance-number" id="portalPoints">0 pts</span>
+          <span class="balance-lifetime" id="portalLifetime">Lifetime Earned: 0 pts</span>
         </div>
       </div>
 
-      <!-- Rewards Grid -->
-      <h3 class="subsection-title">Available Township Rewards</h3>
+      <h3 class="subsection-title">Available Township Rewards (Demonstration Vouchers)</h3>
       <div class="cards-grid" id="rewardsList"></div>
 
-      <!-- Transaction Log -->
-      <h3 class="subsection-title">Verified Drop-Off & Redemption Log</h3>
+      <h3 class="subsection-title">Recent Activity History</h3>
       <div class="table-container">
         <table class="data-table">
           <thead>
             <tr>
               <th>Timestamp</th>
               <th>Resident ID</th>
-              <th>Action / Details</th>
+              <th>Action / Description</th>
               <th>Weight</th>
-              <th>GreenPoints</th>
+              <th>Points Status</th>
             </tr>
           </thead>
           <tbody id="transactionTableBody">
@@ -216,22 +215,22 @@
     <section id="voting" class="content-section">
       <div class="section-header">
         <h2>🗳️ Community Project Voting</h2>
-        <p>Each household can vote once per cycle to prioritize neighborhood greening initiatives.</p>
+        <p>Cast one household vote per cycle to prioritize neighborhood green space development.</p>
       </div>
 
       <div class="cards-grid" id="votingProjectsList"></div>
 
       <p class="disclaimer-note">
-        <em>*Note: Resident voting gauges community preference and prioritizes neighborhood volunteer efforts. It does not constitute automatic municipal planning approval or commercial project funding.</em>
+        <em>*Governance Notice: Voting records resident preferences to guide volunteer initiatives and RA proposals. It does not guarantee automatic municipal funding or planning approvals.</em>
       </p>
     </section>
 
   </main>
 
-  <!-- Footer with Demo Reset -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-container">
-      <p>GreenLoop Prototype — Built for University Hackathon 2026</p>
+      <p>GreenLoop Prototype — Academic Submission for University Hackathon 2026</p>
       <button id="resetDemoBtn" class="btn btn-outline-danger">🔄 Reset Demo Data</button>
     </div>
   </footer>
@@ -239,4 +238,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
