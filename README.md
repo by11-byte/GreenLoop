@@ -27,4 +27,10 @@ GreenLoop addresses the township recycling inertia by bridging the gap between i
 Test the interactive web prototype here:  
 👉 **(https://by11-byte.github.io/GreenLoop/)**
 
+---
 
+## ⚠️ Academic & Operational Disclaimers
+* **Simulated Data:** Resident accounts, reward partners, and proposed hub collection schedules are simulated for hackathon demonstration purposes.
+* **IPC Shopping Centre Case Study:** IPC Shopping Centre's Recycling & Buy-Back Centre is referenced as an independent real-world entity operating its own Tack Points app. It is not an affiliated GreenLoop partner, and GreenPoints cannot be earned or redeemed there.
+* **Distance Estimates:** Proximity figures (~km) are straight-line estimates calculated from the demonstration resident's registered home coordinates, not live GPS.
+* **Civic Voting:** Resident voting measures community preferences to guide neighborhood volunteer efforts; it does not constitute official municipal planning approval or guaranteed capital funding.
